@@ -1,6 +1,6 @@
 package com.example.picking.dto.requests;
 
-import com.example.picking.dto.BaseDTO;
+import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude;

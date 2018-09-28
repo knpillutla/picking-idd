@@ -3,6 +3,7 @@ package com.example.picking.dto.events;
 import java.util.Map;
 
 import com.example.picking.dto.requests.PickConfirmRequestDTO;
+import com.example.util.dto.events.ExceptionEvent;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude;
