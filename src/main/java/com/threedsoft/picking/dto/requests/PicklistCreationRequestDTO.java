@@ -1,8 +1,10 @@
-package com.example.picking.dto.requests;
+package com.threedsoft.picking.dto.requests;
 
-import com.example.util.dto.BaseDTO;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSRequestDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -14,26 +16,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class PickCreationRequestDTO  extends BaseDTO{
+public class PicklistCreationRequestDTO  extends WMSRequestDTO{
 	String busName;
 	Integer locnNbr;
 	String busUnit;
 	String company;
 	String division;
-	String locnBrcd;
-	String itemBrcd;
-	Integer qty;
-	Integer pickedQty;
-	String fromContainer;
-	String toContainer;
-	Long orderId;
-	String orderNbr;
-	String packageNbr;
-	Integer orderLineNbr;
 	String transName;
 	String source;
 	String hostName;
 	String userId;
-	String batchNbr;
-	Long orderLineId;
+	List<Long> orderIdList;
+	List<String> orderNbrList;
+	Integer numOfOrders;
+	String orderSelectionOption; // by area/zone/aisle/pick density/deliveryType(prioriry vs non priority orders)/order date time/ship date time
+	String printOption; //byOrder, byPickPathSequence (will not be grouped by order), delivery type(express orders etc)
 }

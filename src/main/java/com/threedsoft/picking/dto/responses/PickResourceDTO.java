@@ -1,34 +1,40 @@
-package com.example.picking.dto.requests;
+package com.threedsoft.picking.dto.responses;
 
-import java.util.List;
-
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSResourceDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @JsonAutoDetect(fieldVisibility = Visibility.ANY)
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class PicklistCreationRequestDTO  extends BaseDTO{
+public class PickResourceDTO  extends WMSResourceDTO{
+	Long id;
+	Long orderLineId;
+	String batchNbr;
 	String busName;
 	Integer locnNbr;
 	String busUnit;
 	String company;
 	String division;
+	String locnBrcd;
+	String itemBrcd;
+	Integer qty;
+	Integer pickedQty;
+	String fromContainer;
+	String toContainer;
+	Integer statCode;
+	Long orderId;
+	String orderNbr;
+	String packageNbr;
+	Integer orderLineNbr;
 	String transName;
 	String source;
 	String hostName;
 	String userId;
-	List<Long> orderIdList;
-	List<String> orderNbrList;
-	Integer numOfOrders;
-	String orderSelectionOption; // by area/zone/aisle/pick density/deliveryType(prioriry vs non priority orders)/order date time/ship date time
-	String printOption; //byOrder, byPickPathSequence (will not be grouped by order), delivery type(express orders etc)
 }

@@ -1,11 +1,11 @@
-package com.example.picking.dto.responses;
+package com.threedsoft.picking.dto.responses;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSResourceDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class PicklistDTO extends BaseDTO{
+public class PicklistResourceDTO extends WMSResourceDTO{
 	Long id;
 	String busName;
 	Integer locnNbr;
@@ -32,5 +32,5 @@ public class PicklistDTO extends BaseDTO{
 	String source;
 	String hostName;
 	String userId;
-	List<PickDTO> picks = new ArrayList<>();
+	List<PickResourceDTO> picks = new ArrayList<>();
 }

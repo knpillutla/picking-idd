@@ -1,8 +1,8 @@
-package com.example.picking.dto.requests;
+package com.threedsoft.picking.dto.requests;
 
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSRequestDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class PickConfirmRequestDTO extends BaseDTO{
+public class PickConfirmRequestDTO extends WMSRequestDTO{
 	public Long id;
 	public Long orderId;
 	public String batchNbr;
